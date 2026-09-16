@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- Pave tactile -->
+    <View
+        android:id="@+id/touchpadArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_touchpad" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 doigt : deplacer / taper — 2 doigts : defiler"
+        android:gravity="center"
+        android:textColor="@color/text_secondary"
+        android:paddingBottom="6dp"
+        android:textSize="12sp" />
+
+    <!-- Ligne 1 : clic gauche, clic droit, icone clavier -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnLeftClick"
+            style="@style/PillButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Clic gauche" />
+
+        <Button
+            android:id="@+id/btnRightClick"
+            style="@style/PillButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:text="Clic droit" />
+
+        <ImageButton
+            android:id="@+id/fabKeyboard"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_fab"
+            android:src="@drawable/ic_keyboard"
+            android:contentDescription="Afficher le clavier"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Ligne 2 : raccourcis rapides (1/2) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <Button android:id="@+id/btnEsc" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Echap" />
+            <Button android:id="@+id/btnTab" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tab" />
+            <Button android:id="@+id/btnDel" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suppr" />
+            <Button android:id="@+id/btnEnter2" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Entree" />
+            <Button android:id="@+id/btnCopy" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Copier" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Ligne 3 : raccourcis rapides (2/2) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <Button android:id="@+id/btnPaste" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coller" />
+            <Button android:id="@+id/btnUndo" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Annuler" />
+            <Button android:id="@+id/btnSelectAll" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tout sel." />
+            <Button android:id="@+id/btnAltTab" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alt+Tab" />
+            <Button android:id="@+id/btnWinD" style="@style/ChipButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bureau" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Champ invisible utilise uniquement pour capter le clavier Android -->
+    <EditText
+        android:id="@+id/etHiddenInput"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:alpha="0.01" />
+
+</LinearLayout>

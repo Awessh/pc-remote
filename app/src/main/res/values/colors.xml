@@ -1,0 +1,17 @@
+<resources>
+    <color name="ic_launcher_background">#5B6CF9</color>
+
+    <color name="bg_dark">#12151F</color>
+    <color name="surface_card">#1C2030</color>
+    <color name="surface_card_alt">#242A3D</color>
+
+    <color name="accent_primary">#5B6CF9</color>
+    <color name="accent_primary_dark">#4453D8</color>
+    <color name="accent_danger">#F35B6B</color>
+    <color name="accent_success">#33D68B</color>
+    <color name="accent_warning">#F5A623</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9096AB</color>
+    <color name="divider">#2C3145</color>
+</resources>

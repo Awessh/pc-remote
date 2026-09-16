@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telecommande PC"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Controle a distance de votre ordinateur"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Grille 2 colonnes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cardTouchpad"
+                style="@style/DashboardCard"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_touchpad" />
+                <TextView style="@style/DashboardCardLabel" android:text="Pave tactile &amp; clavier" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardApps"
+                style="@style/DashboardCard"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_apps" />
+                <TextView style="@style/DashboardCardLabel" android:text="Applications" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cardWindows"
+                style="@style/DashboardCard"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_windows" />
+                <TextView style="@style/DashboardCardLabel" android:text="Fenetres ouvertes" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardPower"
+                style="@style/DashboardCard"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_power" />
+                <TextView style="@style/DashboardCardLabel" android:text="Alimentation" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Multimedia -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multimedia"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_card"
+            android:padding="8dp">
+
+            <Button android:id="@+id/btnVolDown" style="@style/MediaButton" android:text="🔉" />
+            <Button android:id="@+id/btnVolMute" style="@style/MediaButton" android:text="🔇" />
+            <Button android:id="@+id/btnVolUp" style="@style/MediaButton" android:text="🔊" />
+            <Button android:id="@+id/btnMediaPrev" style="@style/MediaButton" android:text="⏮" />
+            <Button android:id="@+id/btnMediaPlay" style="@style/MediaButton" android:text="⏯" />
+            <Button android:id="@+id/btnMediaNext" style="@style/MediaButton" android:text="⏭" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
